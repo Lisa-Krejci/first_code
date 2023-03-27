@@ -49,25 +49,7 @@ while True:
         c = int(input('Zadej délku strany: '))
         print('Obsah čtverce je: ', obsah_obdelnika(c, c), '.', sep='', end='\n\n')
         
-        while True:
-            pokracovat = input('Přeješ si vypočítat něco dalšího? (odpověz "ano" nebo "ne") ')
-
-            if pokracovat  == 'ano':
-                tvar = input('''Pro který tvar chceš vypočítat obsah?
-1. Čtverec
-2. Obdélník
-3. Kruh
-4. Elipsa
-
-Zadej: ''')
-                break
-            
-            elif pokracovat == 'ne':
-                tvar = 'ne'
-                break
-
-            else:
-                print('\nOdpověz prosím pouze "ano" nebo "ne".')
+        tvar = pokracovat()
 
     elif tvar == '2' or tvar == '2.' or tvar == 'Obdélník' or tvar == 'obdélník' or tvar == '2. Obdélník' or tvar == '2. obdélník':
         c = int(input('Zadej délku první strany: '))
